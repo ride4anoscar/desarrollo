@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Videos</title>
+
+    <style>
+        /* Reset básico */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f5e6d3; /* Marrón claro */
+            color: #333; /* Texto oscuro para contraste */
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        /* Cuadrícula */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Tarjeta */
+        .card {
+            background: #fff1e0; /* Tarjetas un poco más claras que el fondo */
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-content {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .card-content a {
+            display: inline-block;
+            text-decoration: none;
+            color: #8b5e3c; /* Color marrón para enlaces */
+            font-weight: 600;
+            margin-top: 0.5rem;
+            transition: color 0.2s ease;
+        }
+
+        .card-content a:hover {
+            color: #a97455;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Galería Jardines De Triana</h1>
+
+    <section class="grid">
+
+        <article class="card">
+            <img src="./images/triana.png" alt="Reducto">
+            <div class="card-content">
+                <a href="https://streamable.com/if9s5z" target="_blank">
+                     Jardines De Triana Fly Cam
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="./images/Personaje 3a Persona.png" alt="Mesa">
+            <div class="card-content">
+                <a href="https://streamable.com/z3h9tv" target="_blank">
+                    Personaje 3a Persona Video
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="./images/trafico triana.png" alt="Gaia Terrain">
+            <div class="card-content">
+                <a href="https://streamable.com/" target="_blank">
+                    trafico triana Video
+                </a>
+            </div>
+        </article>
+
+        <article class="card">
+            <img src="./images/Saltando Escaleras.png" alt="Hotel Elbao">
+            <div class="card-content">
+                <a href="https://streamable.com/k0n28t" target="_blank">
+                    Saltando Escaleras Video
+                </a>
+            </div>
+        </article>
+
+    </section>
+
+</body>
+</html>
