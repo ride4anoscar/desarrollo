@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Portafolio</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #b56948;
+    color: #06011a;
+    text-align: center;
+}
+
+h1 {
+    margin: 40px 0 20px;
+    font-weight: 300;
+    letter-spacing: 2px;
+}
+
+.carousel {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    padding: 12px;
+}
+
+.slide img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.slide img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+}
+
+/* BOTONES */
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(80, 50, 35, 0.9);
+    border: none;
+    color: #f5f1ee;
+    font-size: 32px;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+.btn:hover {
+    background: rgba(140, 90, 60, 0.9);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* DOTS */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 40px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background: #6b4a3b;
+    border-radius: 50%;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: #d66209;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+    .slide { min-width: 33.33%; }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+    .slide { min-width: 50%; }
+}
+
+@media (max-width: 599px) {
+    .slide { min-width: 100%; }
+    .slide img { height: 260px; }
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(20,10,5,0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 16px;
+}
+
+.modal.close {
+    display: none;
+}
+
+.modal span {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 40px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Carrousel De Imagenes</h1>
+
+<div class="carousel">
+    <button class="btn prev">&#10094;</button>
+
+    <div class="track">
+        <!-- 20 IMÁGENES -->
+       <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+         <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+         <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+        
+        <div class="slide"><img src="images/img18.jpg"></div>
+        <div class="slide"><img src="images/img19.jpg"></div>
+        <div class="slide"><img src="images/img20.jpg"></div>
+    </div>
+
+    <button class="btn next">&#10095;</button>
+</div>
+
+<div class="dots"></div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <span id="close">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+const track = document.querySelector('.track');
+const slides = document.querySelectorAll('.slide');
+const images = document.querySelectorAll('.slide img');
+const nextBtn = document.querySelector('.next');
+const prevBtn = document.querySelector('.prev');
+const dotsContainer = document.querySelector('.dots');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modalImg');
+const closeModal = document.getElementById('close');
+
+let index = 0;
+let autoplay;
+let slidesToShow = getSlidesToShow();
+
+function getSlidesToShow() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 600) return 2;
+    return 1;
+}
+
+const totalDots = Math.ceil(slides.length / slidesToShow);
+
+for (let i = 0; i < totalDots; i++) {
+    const dot = document.createElement('div');
+    dot.classList.add('dot');
+    if (i === 0) dot.classList.add('active');
+    dot.onclick = () => {
+        index = i;
+        update();
+        resetAutoplay();
+    };
+    dotsContainer.appendChild(dot);
+}
+
+function updateDots() {
+    document.querySelectorAll('.dot').forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+    });
+}
+
+function update() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    updateDots();
+}
+
+nextBtn.onclick = () => {
+    index = (index + 1) % totalDots;
+    update();
+    resetAutoplay();
+};
+
+prevBtn.onclick = () => {
+    index = (index - 1 + totalDots) % totalDots;
+    update();
+    resetAutoplay();
+};
+
+function startAutoplay() {
+    autoplay = setInterval(() => {
+        index = (index + 1) % totalDots;
+        update();
+    }, 4000);
+}
+
+function resetAutoplay() {
+    clearInterval(autoplay);
+    startAutoplay();
+}
+
+startAutoplay();
+
+/* SWIPE */
+let startX = 0;
+track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+track.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (startX - endX > 50) nextBtn.click();
+    if (endX - startX > 50) prevBtn.click();
+});
+
+/* MODAL */
+images.forEach(img => {
+    img.onclick = () => {
+        modal.style.display = 'flex';
+        modalImg.src = img.src;
+    };
+});
+
+closeModal.onclick = () => modal.style.display = 'none';
+modal.onclick = e => { if (e.target === modal) modal.style.display = 'none'; };
+
+window.addEventListener('resize', () => {
+    slidesToShow = getSlidesToShow();
+    index = 0;
+    update();
+});
+</script>
+
+</body>
+</html>

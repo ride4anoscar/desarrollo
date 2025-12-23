@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portafolio Creativo</title>
+<meta name="description" content="Portafolio profesional creativo">
+
+<!-- GOOGLE FONT (impactante + elegante) -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+/* ===== FONDO MODERNO ===== */
+body{
+    font-family:'Inter', sans-serif;
+    color:#f4efe9;
+    background:
+        radial-gradient(circle at top left, #d2c9c5 0%, transparent 40%),
+        radial-gradient(circle at bottom right, #b9b3b1 0%, transparent 45%),
+        linear-gradient(180deg, #92837d, #b0adac, #1a0f0a);
+    min-height:100vh;
+}
+
+/* ===== SECCIONES ===== */
+section{
+    padding:80px 5%;
+    max-width:1400px;
+    margin:auto;
+}
+
+/* ===== HERO ===== */
+.hero h1{
+    font-family:'Playfair Display', serif;
+    font-size:clamp(42px, 6vw, 80px);
+    font-weight:800;
+    letter-spacing:2px;
+    line-height:1.1;
+}
+
+.hero p{
+    margin-top:20px;
+    max-width:600px;
+    font-size:18px;
+    color:#d6c8bc;
+}
+
+/* ===== TITULOS ===== */
+h2{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    margin-bottom:30px;
+}
+
+/* ===== CAROUSEL ===== */
+.carousel{
+    position:relative;
+    overflow:hidden;
+    margin-top:40px;
+}
+
+.track{
+    display:flex;
+    transition:transform .7s cubic-bezier(.4,0,.2,1);
+}
+
+.slide{
+    padding:16px;
+}
+
+.slide figure{
+    background:linear-gradient(180deg,#3a241a,#2b1b14);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+}
+
+.slide img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    cursor:pointer;
+    transition:transform .6s ease, filter .6s ease;
+}
+
+.slide:hover img{
+    transform:scale(1.06);
+    filter:brightness(1.1);
+}
+
+figcaption{
+    padding:16px;
+    font-size:15px;
+    letter-spacing:.5px;
+    background:rgba(0,0,0,.25);
+}
+
+/* ===== BOTONES ===== */
+.btn{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(120,80,55,.85);
+    color:#fff;
+    border:none;
+    font-size:30px;
+    padding:14px 18px;
+    cursor:pointer;
+    border-radius:50%;
+    z-index:10;
+    backdrop-filter:blur(6px);
+}
+
+.btn:hover{
+    background:rgba(170,120,90,.9);
+}
+
+.prev{left:20px}
+.next{right:20px}
+
+/* ===== DOTS ===== */
+.dots{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:40px;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    background:#6b4a3b;
+    border-radius:50%;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.dot.active{
+    background:#f4efe9;
+    transform:scale(1.2);
+}
+
+/* ===== RESPONSIVE ===== */
+@media(min-width:1024px){.slide{min-width:33.33%}}
+@media(min-width:600px) and (max-width:1023px){.slide{min-width:50%}}
+@media(max-width:599px){
+    .slide{min-width:100%}
+    .slide img{height:260px}
+}
+
+/* ===== MODAL ===== */
+.modal{
+    position:fixed;
+    inset:0;
+    background:rgba(10,5,3,.95);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:20;
+}
+
+.modal img{
+    max-width:90%;
+    max-height:90%;
+    border-radius:20px;
+}
+
+.modal span{
+    position:absolute;
+    top:30px;
+    right:40px;
+    font-size:42px;
+    cursor:pointer;
+}
+
+/* ===== TEXTO ===== */
+.text{
+    max-width:800px;
+    color:#d6c8bc;
+    font-size:17px;
+    line-height:1.8;
+}
+footer{
+    text-align:center;
+    padding:40px 0;
+    color:#bdaea3;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Ride4anOscar</h1>
+    <p>Portafolio creativo · Diseño · Fotografía · Arte visual</p>
+</section>
+
+<!-- PORTFOLIO -->
+<section>
+    <h2>Portafolio</h2>
+
+    <div class="carousel">
+        <button class="btn prev">&#10094;</button>
+        <div class="track">
+            <!-- 20 IMÁGENES -->
+          <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+         <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+         <div class="slide"><img src="./FOTOS 2.0/Collage_2024-11-09_00_46_46.jpg" alt="Proyecto 1"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235539.png" alt="Proyecto 2"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235647.png" alt="Proyecto 3"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235711.png" alt="Proyecto 4"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-08 235842.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000238.png" alt="Proyecto 6"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000415.png"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000455.png" alt="Proyecto 8"></div>
+        <div class="slide"><img src="./FOTOS 2.0/Screenshot 2024-11-09 000513.png" alt="Proyecto 9"></div>
+        
+        </div>
+        <button class="btn next">&#10095;</button>
+    </div>
+
+    <div class="dots"></div>
+</section>
+
+<!-- SOBRE MI -->
+<section>
+    <h2>Sobre mí</h2>
+    <p class="text">
+        Soy un creativo enfocado en crear experiencias visuales modernas, elegantes y funcionales.
+        Mi trabajo combina estética contemporánea con atención al detalle y narrativa visual.
+    </p>
+</section>
+
+<footer>
+    © 2025 · Ride4anOscar
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <span id="close">&times;</span>
+    <img id="modalImg">
+</div>
+
+<script>
+const track=document.querySelector('.track');
+const slides=[...document.querySelectorAll('.slide')];
+const next=document.querySelector('.next');
+const prev=document.querySelector('.prev');
+const dots=document.querySelector('.dots');
+const modal=document.getElementById('modal');
+const modalImg=document.getElementById('modalImg');
+const close=document.getElementById('close');
+
+let index=0,auto;
+
+function slidesToShow(){
+    if(innerWidth>=1024)return 3;
+    if(innerWidth>=600)return 2;
+    return 1;
+}
+function pages(){return Math.ceil(slides.length/slidesToShow())}
+
+function buildDots(){
+    dots.innerHTML='';
+    for(let i=0;i<pages();i++){
+        let d=document.createElement('div');
+        d.className='dot'+(i===0?' active':'');
+        d.onclick=()=>{index=i;update();reset()};
+        dots.appendChild(d);
+    }
+}
+function updateDots(){
+    [...dots.children].forEach((d,i)=>d.classList.toggle('active',i===index));
+}
+function update(){
+    track.style.transform=`translateX(-${index*100}%)`;
+    updateDots();
+}
+next.onclick=()=>{index=(index+1)%pages();update();reset()};
+prev.onclick=()=>{index=(index-1+pages())%pages();update();reset()};
+
+function autoplay(){
+    auto=setInterval(()=>{index=(index+1)%pages();update()},4500);
+}
+function reset(){clearInterval(auto);autoplay()}
+autoplay();
+
+/* Swipe */
+let x=0;
+track.addEventListener('touchstart',e=>x=e.touches[0].clientX);
+track.addEventListener('touchend',e=>{
+    let dx=e.changedTouches[0].clientX;
+    if(x-dx>50)next.click();
+    if(dx-x>50)prev.click();
+});
+
+/* Modal */
+slides.forEach(s=>{
+    s.querySelector('img').onclick=()=>{
+        modal.style.display='flex';
+        modalImg.src=s.querySelector('img').src;
+    }
+});
+close.onclick=()=>modal.style.display='none';
+modal.onclick=e=>{if(e.target===modal)modal.style.display='none'};
+
+window.addEventListener('resize',()=>{index=0;buildDots();update()});
+buildDots();
+</script>
+
+</body>
+</html>
